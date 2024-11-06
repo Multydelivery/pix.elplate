@@ -168,7 +168,10 @@ nav {
 
 /* Footer Styling */
 footer {
-    font-family: monospace;
+    font-family: 'Black Ops One', sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
     font-weight: 900;
     margin-top: 100px;
     text-align: center;
