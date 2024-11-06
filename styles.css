@@ -1,0 +1,209 @@
+/* General Body Styling */
+body { 
+    position: relative;
+    background: linear-gradient(to right, #5f8bf2, #5beedf); /* Gradient background */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #7887ff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Container Styling for Responsiveness */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#section1 {
+    padding: 100px 50px;
+    background-color: #85c0fb;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* About Section Styling */
+#about-section {
+    padding: 100px 50px;
+    background-color: #85c0fb;
+    border-radius: 10px;
+}
+
+/* About Section Heading and Text */
+#about-section h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: rgb(56, 56, 122);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#about-section p {
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* About Section Image Styling */
+#about-section img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Set a smaller maximum width */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#about-section img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Flex Centering for About Section */
+#about-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Title and Text Styling */
+.titles {
+    padding: 15px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.titles h2 {
+    font-size: 2.5rem;
+    color: rgb(56, 56, 122);
+    margin-bottom: 10px;
+}
+.titles p {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+#section2 {
+    font-family:monospace;
+    padding: 100px 50px;
+    background-color: #85c0fb;
+    border-radius: 10px;
+}
+
+
+
+
+/* Link Styling */
+.container a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: #870707;
+}
+
+/* Rounded Border Link Styling */
+.rounded-border-link {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+.rounded-border-link:hover {
+    border-color: white;
+    color: #87CEFA;
+    background-color: rgb(56, 56, 122);
+}
+
+/* Menu Image Hover Effect */
+.menu-image {
+    width: 250px; /* Larger width */
+    height: 200px; /* Larger height */;
+    margin: 10px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-image:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Contact Icons */
+.icon-container {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+.icon-container:hover {
+    background-color: #becede;
+}
+
+.col-lg-6  {
+    font-family: monospace;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+}
+
+/* Footer Styling */
+footer {
+    font-family: monospace;
+    font-weight: 900;
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+    background-color: #85c0fb;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #about-section img {
+        max-width: 250px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .menu-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Center titles and text in About Us section on smaller screens */
+@media (max-width: 768px) {
+    #about-section .col-md-6 {
+        text-align: center;
+    }
+    #about-section h3 {
+        text-align: center;
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    #about-section p {
+        text-align: center;
+        font-size: 1rem; /* Adjust font size if needed */
+    }
+}
+
+
+  
+  
+  
+  
