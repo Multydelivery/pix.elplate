@@ -68,6 +68,7 @@ nav {
 
 /* About Section Image Styling */
 #about-section img {
+    margin: 50px;
     width: 100%;
     height: auto;
     max-width: 300px;
