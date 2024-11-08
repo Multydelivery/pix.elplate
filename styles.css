@@ -2,7 +2,10 @@
 body { 
     position: relative;
     background: url('costume-menu-images/background-pc-processor-gold.jpeg') fixed;
-    color: #333;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    text-align: center; /* Center-aligns all content */
 }
 
 /* Navbar Styling */
@@ -12,34 +15,29 @@ nav {
     position: fixed;
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(to right, #052ac1, #9a1b0f);
+    background-image: linear-gradient(to right, #30475E, #1a2a39);
     padding: 10px 0;
-    box-shadow: 0px 10px 10px rgba(239, 239, 5, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
 
-
-
-
 /* Logo Styling */
-
-
 .logo-image {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 /* Navbar Link Styling */
 .nav-link {
-    color: #f6f7f9;
+    color: #ECE5C7; /* Light beige text for better contrast */
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #87CEFA;
+    color: #FFD700; /* Bright gold hover color */
 }
 
 /* Toggler Button Styling */
@@ -68,156 +66,146 @@ nav {
     }
 }
 
-
-
 /* Global Container Styling for Responsiveness */
 .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 15px;
-    
 }
 
 .container p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ECE5C7;
 }
 
 /* Section Styling */
-#section1 p {
-    font-family: 'Black Ops One', sans-serif;
-}
 #section1, #section2, #about-section, #section4 {
-    padding: 100px 50px;
-    color: white;
-    background-image: linear-gradient(to right, #0764f9, #430986);
-    border-radius: 10px;
-}
-
-#section2 , #about-section p, .contact-info p {
-    font-family: monospace;
+    padding: 60px 40px;
+    background-color: rgba(48, 71, 94, 0.9); /* Semi-transparent dark blue background */
+    border-radius: 12px;
+    color: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
 }
 
 /* Section Heading and Text Styling */
 h3, .contact-info h3 {
     font-family: 'Black Ops One', sans-serif;
-    font-size: 2rem;
-    color: rgb(242, 242, 247);
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: #FFD700;
+    margin-bottom: 15px;
     text-align: center;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
+    color: #F8F8F8;
     margin-bottom: 20px;
 }
 
-/* Image Styling for Sections */
-img {
-    margin: 30px auto;
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
 /* Titles and Text Styling */
-.titles {
-    padding: 10px 0;
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
-    text-align: center;
-}
-
 .titles h2 {
-    padding: 10px 11px;
+    padding: 10px;
     display: inline-block;
     font-family: 'Black Ops One', sans-serif;
     font-weight: 400;
-    font-size: 36px;
-    color: white;
-    text-shadow: rgb(239, 176, 3) 1px 0 20px;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 15px #FFD700, 0px 0px 20px rgba(0, 0, 0, 0.5); /* Brighter shadow for standout effect */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Adds smooth scaling effect */
+}
+
+.titles h2:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+    text-shadow: 4px 4px 20px #FFD700, 0px 0px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
 }
 
 .titles p {
-    background-color: #1a1919;
-    display: inline-block;
-    color: #eef2f2;
-    font-size: 1.5rem;
+    background-color: rgba(26, 25, 25, 0.8);
+    color: #ececec;
+    font-size: 1.4rem;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 /* Link Styling */
 .container a {
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #FFD700;
+}
+
+.container a:hover {
+    color: #87CEFA;
 }
 
 /* Rounded Border Link Styling */
 .rounded-border-link {
     border: 2px solid transparent;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 8px 15px;
     transition: all 0.3s ease;
+    color: #FFFFFF;
+    background-color: #30475E;
 }
 
 .rounded-border-link:hover {
-    border-color: white;
-    color: #87CEFA;
-    background-color: rgb(56, 56, 122);
+    border-color: #FFD700;
+    background-color: #1a2a39;
 }
 
 /* Menu Image Hover Effect */
 .menu-image {
     width: 250px;
     height: 200px;
-    margin: 10px auto;
+    margin: 20px auto;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .menu-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Contact Icons */
 .icon-container {
-    background-color: #c2c8cf;
+    background-color: #2A9D8F;
     color: white;
     border-radius: 50%;
     padding: 10px;
     margin: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .icon-container:hover {
-    background-color: #becede;
+    background-color: #FFD700; /* Gold hover for contact icons */
 }
 
 /* Contact Info Styling */
 .contact-info {
-    color: white;
+    color: #F8F8F8;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-top: 15px;
 }
 
 /* Footer Styling */
 footer {
     font-family: 'Black Ops One', sans-serif;
-    color: white;
-    letter-spacing: 5px;
-    font-size: 2rem;
-    margin-top: 100px;
+    color: #F8F8F8;
+    font-size: 1.8rem;
+    margin-top: 80px;
     text-align: center;
-    padding: 50px;
-    background-image: linear-gradient(to right, #0764f9, #ea2525);
-    position: relative;
-    width: 100%;
+    padding: 40px;
+    background-color: #30475E;
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Adjustments for Smaller Screens */
@@ -242,6 +230,8 @@ footer {
         margin-bottom: 15px;
     }
 }
+
+
 
   
   
