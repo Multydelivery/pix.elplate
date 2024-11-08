@@ -1,30 +1,74 @@
 /* General Body Styling */
 body { 
     position: relative;
-    background: url('background-pc-processor-gold.jpeg') fixed;
+    background: url('costume-menu-images/background-pc-processor-gold.jpeg') fixed;
     color: #333;
 }
 
-/* Logo Text */
-.logo-text {
-    padding-top: 5px;
-    letter-spacing: 0.5px;
-    font-family: 'Black Ops One', sans-serif;
-    color: #f6f7f9;
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Navigation Styling */
+/* Navbar Styling */
 nav {
+    font-family: 'Black Ops One', sans-serif;
     font-size: 1.2rem;
     position: fixed;
     width: 100%;
-    z-index: 1000;
-    background-image: linear-gradient(to right, #0764f9, #430986);
+    height: 80px;
+    background-image: linear-gradient(to right, #052ac1, #9a1b0f);
     padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 10px rgba(239, 239, 5, 0.2);
+    z-index: 1000;
 }
+
+
+
+
+/* Logo Styling */
+
+
+.logo-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Navbar Link Styling */
+.nav-link {
+    color: #f6f7f9;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #87CEFA;
+}
+
+/* Toggler Button Styling */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+}
+
+
 
 /* Global Container Styling for Responsiveness */
 .container {
@@ -32,6 +76,7 @@ nav {
     width: 100%;
     margin: 0 auto;
     padding: 15px;
+    
 }
 
 .container p {
@@ -40,6 +85,9 @@ nav {
 }
 
 /* Section Styling */
+#section1 p {
+    font-family: 'Black Ops One', sans-serif;
+}
 #section1, #section2, #about-section, #section4 {
     padding: 100px 50px;
     color: white;
@@ -47,63 +95,55 @@ nav {
     border-radius: 10px;
 }
 
-#section2, #about-section p, .contact-info p {
+#section2 , #about-section p, .contact-info p {
     font-family: monospace;
 }
 
-/* About Section Heading and Text */
-#about-section h3, .contact-info h3 {
+/* Section Heading and Text Styling */
+h3, .contact-info h3 {
     font-family: 'Black Ops One', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: rgb(242, 242, 247);
     margin-bottom: 10px;
     text-align: center;
 }
 
-#about-section p {
-    font-size: 2rem;
+p {
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* About Section Image Styling */
-#about-section img {
-    margin: 50px;
+/* Image Styling for Sections */
+img {
+    margin: 30px auto;
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-#about-section img:hover {
+img:hover {
     transform: scale(1.05);
-}
-
-/* Flex Centering for About Section */
-#about-section .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 /* Titles and Text Styling */
 .titles {
-    padding: 15px 0;
+    padding: 10px 0;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     text-align: center;
 }
 
 .titles h2 {
     padding: 10px 11px;
-    background-color: #1a1919;
     display: inline-block;
     font-family: 'Black Ops One', sans-serif;
     font-weight: 400;
     font-size: 36px;
-    color: rgb(250, 250, 253);
+    color: white;
+    text-shadow: rgb(239, 176, 3) 1px 0 20px;
     margin-bottom: 10px;
 }
 
@@ -111,7 +151,6 @@ nav {
     background-color: #1a1919;
     display: inline-block;
     color: #eef2f2;
-    font-family: monospace;
     font-size: 1.5rem;
 }
 
@@ -172,47 +211,38 @@ footer {
     font-family: 'Black Ops One', sans-serif;
     color: white;
     letter-spacing: 5px;
-    font-size: 1.2rem;
-    font-weight: 900;
+    font-size: 2rem;
     margin-top: 100px;
     text-align: center;
     padding: 50px;
-    background-image: linear-gradient(to right, #0764f9, #e8e5eb);
+    background-image: linear-gradient(to right, #0764f9, #ea2525);
     position: relative;
     width: 100%;
 }
 
 /* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
-    #about-section img {
-        max-width: 250px;
+    img {
+        max-width: 200px;
     }
 
-    #about-section .col-md-6,
-    #about-section h3,
-    #about-section p {
-        text-align: center;
+    h3 {
+        font-size: 1.5rem;
     }
 
-    #about-section h3 {
-        padding: 10px;
-        font-size: 2rem;
-    }
-
-    #about-section p {
+    p {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .menu-image {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
     }
 }
 
-  
   
   
   
