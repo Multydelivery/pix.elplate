@@ -1,12 +1,20 @@
 /* General Body Styling */
+/* General Body Styling */
 body { 
     position: relative;
-    background: url('costume-menu-images/background-pc-processor-gold.jpeg') fixed;
+    background: linear-gradient(135deg, #1f2937, #744903);
     color: #333333;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    text-align: center; /* Center-aligns all content */
 }
+
+/* Media Query for Background Attachment */
+@media (min-width: 768px) {
+    body {
+        background-attachment: fixed; /* Apply fixed attachment only on larger screens */
+    }
+}
+
 
 /* Navbar Styling */
 nav {
@@ -15,10 +23,15 @@ nav {
     position: fixed;
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(to right, #30475E, #1a2a39);
+    background-image: linear-gradient(to right, rgba(48, 71, 94, 0.9), rgba(26, 42, 57, 0.9));
     padding: 10px 0;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: background-color 0.4s ease; /* Smooth color transition */
+}
+
+nav:hover {
+    background-image: linear-gradient(to right, #30475E, #1a2a39); /* Solid on hover */
 }
 
 /* Logo Styling */
@@ -31,18 +44,24 @@ nav {
 
 /* Navbar Link Styling */
 .nav-link {
-    color: #ECE5C7; /* Light beige text for better contrast */
+    color: #ECE5C7;
     padding: 10px 15px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #FFD700; /* Bright gold hover color */
+    color: #FFD700;
+    transform: translateY(-2px); /* Hover lift effect */
 }
 
 /* Toggler Button Styling */
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotate effect for interactivity */
 }
 
 /* Responsive Adjustments for Navbar */
@@ -74,21 +93,57 @@ nav {
     padding: 15px;
 }
 
-.container p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ECE5C7;
-}
-
 /* Section Styling */
-#section1, #section2, #about-section, #section4 {
+#section2, #about-section, #section4 {
     padding: 60px 40px;
-    background-color: rgba(48, 71, 94, 0.9); /* Semi-transparent dark blue background */
+    background-color: rgba(48, 71, 94, 0.85);
     border-radius: 12px;
     color: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+#section2:hover, #about-section:hover, #section4:hover {
+    transform: translateY(-5px); /* Hover effect to lift section */
+    background-color: rgba(48, 71, 94, 0.95);
+}
+/* Large Image Styling */
+.large-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Review Column Text Styling */
+#section1 .col-lg-6 h3 {
+    color: #FFD700;
+    font-size: 2.5rem;
+}
+
+#section1 .col-lg-6 p {
+    color: #ECE5C7;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+#section1 .btn-outline-dark {
+    color: #FFD700;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#section1 .btn-outline-dark:hover {
+    color: white;
+    background-color: #FFD700;
+}
+
 
 /* Section Heading and Text Styling */
 h3, .contact-info h3 {
@@ -100,14 +155,18 @@ h3, .contact-info h3 {
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
-p {
-    font-size: 1.1rem;
-    text-align: center;
-    color: #F8F8F8;
-    margin-bottom: 20px;
+/* Titles with Hover Effect */
+/* Titles Container Centering */
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align the text within */
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
-/* Titles and Text Styling */
+/* Titles with Hover Effect */
 .titles h2 {
     padding: 10px;
     display: inline-block;
@@ -115,33 +174,36 @@ p {
     font-weight: 400;
     font-size: 3rem;
     color: #FFFFFF;
-    text-shadow: 2px 2px 15px #FFD700, 0px 0px 20px rgba(0, 0, 0, 0.5); /* Brighter shadow for standout effect */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Adds smooth scaling effect */
+    text-shadow: 2px 2px 15px #FFD700, 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove any extra margin for centering */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Centering effect on hover */
 .titles h2:hover {
-    transform: scale(1.1); /* Slight scaling effect on hover */
-    text-shadow: 4px 4px 20px #FFD700, 0px 0px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+    transform: scale(1.1);
+    text-shadow: 4px 4px 20px #FFD700, 0px 0px 30px rgba(0, 0, 0, 0.6);
 }
 
-.titles p {
-    background-color: rgba(26, 25, 25, 0.8);
-    color: #ececec;
-    font-size: 1.4rem;
-    padding: 5px 15px;
-    border-radius: 5px;
+/* Paragraph Styling */
+.container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ECE5C7;
+    text-align: center;
 }
 
 /* Link Styling */
 .container a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #FFD700;
+    color: #f6f5f1;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .container a:hover {
     color: #87CEFA;
+    transform: translateY(-2px); /* Lift effect for links */
 }
 
 /* Rounded Border Link Styling */
@@ -181,18 +243,19 @@ p {
     border-radius: 50%;
     padding: 10px;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .icon-container:hover {
-    background-color: #FFD700; /* Gold hover for contact icons */
+    background-color: #FFD700;
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
 /* Contact Info Styling */
 .contact-info {
     color: #F8F8F8;
-    font-size: 1.1rem;
-    text-align: left;
+    font-size: 1.2rem;
+    text-align: center;
     margin-top: 15px;
 }
 
@@ -230,6 +293,7 @@ footer {
         margin-bottom: 15px;
     }
 }
+
 
 
 
