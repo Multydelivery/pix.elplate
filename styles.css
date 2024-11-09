@@ -2,7 +2,7 @@
 /* General Body Styling */
 body { 
     position: relative;
-    background: linear-gradient(135deg, #1f2937, #744903);
+    background: linear-gradient(135deg, #1f2937, #5da9a9);
     color: #333333;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -96,7 +96,7 @@ nav:hover {
 /* Section Styling */
 #section2, #about-section, #section4 {
     padding: 60px 40px;
-    background-color: rgba(48, 71, 94, 0.85);
+    background-color: rgba(72, 105, 137, 0.85);
     border-radius: 12px;
     color: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -124,7 +124,7 @@ nav:hover {
 
 /* Review Column Text Styling */
 #section1 .col-lg-6 h3 {
-    color: #FFD700;
+    color: #ECE5C7;
     font-size: 2.5rem;
 }
 
@@ -148,8 +148,8 @@ nav:hover {
 /* Section Heading and Text Styling */
 h3, .contact-info h3 {
     font-family: 'Black Ops One', sans-serif;
-    font-size: 2.2rem;
-    color: #FFD700;
+    font-size: 2rem;
+    color: #ECE5C7;
     margin-bottom: 15px;
     text-align: center;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
