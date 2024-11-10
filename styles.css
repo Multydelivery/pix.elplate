@@ -174,7 +174,7 @@ h3, .contact-info h3 {
     font-weight: 400;
     font-size: 3rem;
     color: #FFFFFF;
-    text-shadow: 2px 2px 15px #FFD700, 0px 0px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 15px #615823, 0px 0px 20px rgba(0, 0, 0, 0.5);
     margin: 0; /* Remove any extra margin for centering */
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
