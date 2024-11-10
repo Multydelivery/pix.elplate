@@ -1,8 +1,9 @@
 /* General Body Styling */
+/* General Body Styling */
 body { 
     position: relative;
     background: linear-gradient(135deg, #1f2937, #5da9a9);
-    color: #ECE5C7;
+    color: #333333;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
@@ -10,14 +11,15 @@ body {
 /* Media Query for Background Attachment */
 @media (min-width: 768px) {
     body {
-        background-attachment: fixed;
+        background-attachment: fixed; /* Apply fixed attachment only on larger screens */
     }
 }
+
 
 /* Navbar Styling */
 nav {
     font-family: 'Black Ops One', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     position: fixed;
     width: 100%;
     height: 80px;
@@ -25,11 +27,11 @@ nav {
     padding: 10px 0;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease; /* Smooth color transition */
 }
 
 nav:hover {
-    background-image: linear-gradient(to right, #30475E, #1a2a39);
+    background-image: linear-gradient(to right, #30475E, #1a2a39); /* Solid on hover */
 }
 
 /* Logo Styling */
@@ -44,52 +46,184 @@ nav:hover {
 .nav-link {
     color: #ECE5C7;
     padding: 10px 15px;
-    font-size: 1rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link:hover {
     color: #FFD700;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Hover lift effect */
+}
+
+/* Toggler Button Styling */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotate effect for interactivity */
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 10px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+}
+
+/* Global Container Styling for Responsiveness */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 /* Section Styling */
-.section-content {
+#section2, #about-section, #section4 {
     padding: 60px 40px;
     background-color: rgba(72, 105, 137, 0.85);
     border-radius: 12px;
+    color: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
-    color: #ECE5C7;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Consistent Text Sizes */
-h2 {
+#section2:hover, #about-section:hover, #section4:hover {
+    transform: translateY(-5px); /* Hover effect to lift section */
+    background-color: rgba(48, 71, 94, 0.95);
+}
+/* Large Image Styling */
+.large-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Review Column Text Styling */
+#section1 .col-lg-6 h3 {
     font-family: 'Francois One', sans-serif;
+    color: #ECE5C7;
     font-size: 2.5rem;
-    color: #FFFFFF;
-    text-align: center;
-    text-shadow: 2px 2px 15px #615823;
-    margin-bottom: 20px;
 }
 
+#section1 .col-lg-6 p {
+    color: #ECE5C7;
+    font-family: 'Fr'
+    line-height: 1.6;
+}
+
+#section1 .btn-outline-dark {
+    color: #FFD700;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#section1 .btn-outline-dark:hover {
+    color: white;
+    background-color: #FFD700;
+}
+
+
+/* Section Heading and Text Styling */
 h3, .contact-info h3 {
     font-family: 'Francois One', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ECE5C7;
+    margin-bottom: 15px;
     text-align: center;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
 }
 
-p {
-    font-size: 1.1rem;
+
+/* Titles with Hover Effect */
+/* Titles Container Centering */
+.titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align the text within */
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/* Titles with Hover Effect */
+.titles h2 {
+    padding: 10px;
+    display: inline-block;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 15px #615823, 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Remove any extra margin for centering */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Centering effect on hover */
+.titles h2:hover {
+    transform: scale(1.1);
+    text-shadow: 4px 4px 20px #FFD700, 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Paragraph Styling */
+.container p {
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #ECE5C7;
     text-align: center;
-    margin-bottom: 15px;
 }
 
-/* Menu Image Styling */
+/* Link Styling */
+.container a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #f6f5f1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.container a:hover {
+    color: #87CEFA;
+    transform: translateY(-2px); /* Lift effect for links */
+}
+
+/* Rounded Border Link Styling */
+.rounded-border-link {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+    background-color: #30475E;
+}
+
+.rounded-border-link:hover {
+    border-color: #FFD700;
+    background-color: #1a2a39;
+}
+
+/* Menu Image Hover Effect */
 .menu-image {
     width: 250px;
     height: 200px;
@@ -104,48 +238,63 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Button Styling */
-.btn-outline-dark {
-    color: #FFD700;
-    transition: color 0.3s ease, background-color 0.3s ease;
+/* Contact Icons */
+.icon-container {
+    background-color: #2A9D8F;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-outline-dark:hover {
-    color: white;
+.icon-container:hover {
     background-color: #FFD700;
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Contact Info Styling */
+.contact-info {
+    color: #F8F8F8;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px;
 }
 
 /* Footer Styling */
 footer {
     font-family: 'Black Ops One', sans-serif;
-    font-size: 1rem;
     color: #F8F8F8;
+    font-size: 1.8rem;
+    margin-top: 80px;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     background-color: #30475E;
     box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
+    img {
+        max-width: 200px;
     }
-    
+
     h3 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-    
+
     p {
         font-size: 1rem;
     }
-    
-    .menu-image {
-        width: 200px;
-        height: 150px;
-    }
 }
 
+@media (max-width: 600px) {
+    .menu-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+}
 
 
 
