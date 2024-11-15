@@ -69,8 +69,6 @@
 
 
 
-
-
 <!-- Our Services Section -->
 <div class="titles">
   <h2 id="services">Our Services</h2>
@@ -79,50 +77,69 @@
 <section id="section2" class="container-fluid text-light" 
   style="
     background: url('our-services-images/ink explosion.png') no-repeat center center / cover;
-    padding: 60px 20px;"
+    padding: 60px 20px; position: relative;"
 >
-  <div class="row text-center">
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <div class="tv-frame">
+  <!-- Overlay for readability -->
+  <div class="position-absolute top-0 start-0 w-100 h-100">
+  </div>
+
+  <!-- Content -->
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <img src="our-services-images/menu-digital-our-services-pixel-plate.jpg" alt="Digital Menu"
           class="menu-image img-fluid">
-        <div class="tv-stand"></div>
+        <p 
+          style="font-family: 'Black Ops One', sans-serif; background: rgba(0, 0, 0, 0.7); color: white; display: inline-block; padding: 5px 10px; border-radius: 5px;">
+          Digital Menu
+        </p>
+        <p 
+          style="background: rgba(33, 83, 55, 0.6); color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+          Offer an engaging, interactive experience with customizable digital menus.
+        </p>
       </div>
-      <p style="font-family: 'Black Ops One', sans-serif;">Digital Menu</p>
-      <p>Offer an engaging, interactive experience with customizable digital menus.</p>
-      <a target="_blank">
-        <i class="fa-solid fa-angles-right"></i>
-      </a>
-    </div>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <img src="our-services-images/business card.jpg" alt="Promotion & Social Management"
-        class="menu-image img-fluid">
-      <p style="font-family: 'Black Ops One', sans-serif;">Business Cards</p>
-      <p>Boost your online presence and engage with customers across places.</p>
-      <a target="_blank">
-        <i class="fa-solid fa-angles-right"></i>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <img src="our-services-images/1584082601Web-development-designing-Anvar-Freelancer-1-1.png" alt="Web Design"
-        class="menu-image img-fluid">
-      <p style="font-family: 'Black Ops One', sans-serif;">Web Design</p>
-      <p>Create user-friendly, visually captivating websites to represent your brand.</p>
-      <a target="_blank">
-        <i class="fa-solid fa-angles-right"></i>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <img src="our-services-images/carwash-transparent-background.png" alt="Digital Marketing" class="menu-image img-fluid">
-      <p style="font-family: 'Black Ops One', sans-serif;">Flyers</p>
-      <p>Implement targeted strategies to drive growth and increase brand awareness.</p>
-      <a target="_blank">
-        <i class="fa-solid fa-angles-right"></i>
-      </a>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <img src="our-services-images/business card.jpg" alt="Business Cards" class="menu-image img-fluid">
+        <p 
+          style="font-family: 'Black Ops One', sans-serif; background: rgba(0, 0, 0, 0.7); color: white; display: inline-block; padding: 5px 10px; border-radius: 5px;">
+          Business Cards
+        </p>
+        <p 
+          style="background: rgba(33, 83, 55, 0.6); color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+          Boost your online presence and engage with customers across places.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <img src="our-services-images/1584082601Web-development-designing-Anvar-Freelancer-1-1.png" alt="Web Design"
+          class="menu-image img-fluid">
+        <p 
+          style="font-family: 'Black Ops One', sans-serif; background: rgba(0, 0, 0, 0.7); color: white; display: inline-block; padding: 5px 10px; border-radius: 5px;">
+          Web Design
+        </p>
+        <p 
+          style="background: rgba(33, 83, 55, 0.6); color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+          Create user-friendly, visually captivating websites to represent your brand.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <img src="our-services-images/flyer-car-wash-clean.jpeg" alt="Flyers" class="menu-image img-fluid">
+        <p 
+          style="font-family: 'Black Ops One', sans-serif; background: rgba(0, 0, 0, 0.7); color: white; display: inline-block; padding: 5px 10px; border-radius: 5px;">
+          Flyers
+        </p>
+        <p 
+          style="background: rgba(33, 83, 55, 0.6); color: white; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+          Implement targeted strategies to drive growth and increase brand awareness.
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 
   <!-- About Us Section -->
@@ -343,10 +360,17 @@
 
 
 
-  <footer>
-    <p style="font-family: 'Black Ops One', sans-serif;">&copy; 2024 Pixel & Plate</p>
-    <i class="fa-regular fa-star-half-stroke" style="font-size: 25px;"></i>
-  </footer>
+  <footer 
+  class="text-center text-light py-3" 
+  style="
+    background: url('our-services-images/ink explosion.png') no-repeat center center / cover;
+    font-family: 'Black Ops One', sans-serif;
+  "
+>
+  <p>&copy; 2024 Pixel & Plate</p>
+  <i class="fa-regular fa-star-half-stroke" style="font-size: 25px;"></i>
+</footer>
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
