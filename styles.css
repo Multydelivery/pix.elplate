@@ -85,6 +85,7 @@ nav:hover {
     }
 }
 
+
 /* Global Container Styling for Responsiveness */
 .container {
     max-width: 1200px;
@@ -130,7 +131,6 @@ nav:hover {
 
 #section1 .col-lg-6 p {
     color: #ECE5C7;
-    font-family: 'Fr'
     line-height: 1.6;
 }
 
